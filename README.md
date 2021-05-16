@@ -1,2 +1,2 @@
-# kanban-with-react-udemy
+# kanban-react-udemy
 Created with CodeSandbox
