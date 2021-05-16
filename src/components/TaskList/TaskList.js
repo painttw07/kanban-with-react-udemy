@@ -16,7 +16,14 @@ export default function TaskList({ title, onAddTask, tasks }) {
       <div className="title">{title}</div>
       <div className="content">
         {tasks.map((task) => {
-          return <TaskItem />;
+          return (
+            <TaskItem
+              key={task.id}
+              id={task.id}
+              title={task.title}
+              taskState={task.taskState}
+            />
+          );
         })}
       </div>
       <button onClick={addTask}>Adicionar Tarefa</button>
