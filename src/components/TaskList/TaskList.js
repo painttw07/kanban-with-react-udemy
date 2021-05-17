@@ -3,10 +3,17 @@ import "./tasklist.css";
 import PropTypes from "prop-types";
 import TaskItem from "../TaskItem/TaskItem";
 
-export default function TaskList({ title, onAddTask, tasks, onTaskUpdate }) {
+export default function TaskList({
+  title,
+  taskState,
+  onAddTask,
+  tasks,
+  onTaskUpdate,
+  onDeleteTask
+}) {
   const addTask = () => {
     //responsável por chamar o onaddtask
-    onAddTask("Nova Tarefa", "Pendente");
+    onAddTask("Nova Tarefa", taskState);
   };
 
   //count está sendo modificado sempre que chamada a função increment
@@ -21,8 +28,9 @@ export default function TaskList({ title, onAddTask, tasks, onTaskUpdate }) {
               key={task.id}
               id={task.id}
               title={task.title}
-              taskState={task.taskState}
+              taskState={task.state}
               onTaskUpdate={onTaskUpdate}
+              onDeleteTask={onDeleteTask}
             />
           );
         })}

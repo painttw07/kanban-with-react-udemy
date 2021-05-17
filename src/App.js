@@ -37,6 +37,12 @@ export default function App() {
     });
   };
 
+  const deleteTask = (id) => {
+    setTasks((existingTasks) => {
+      return existingTasks.filter((task) => task.id !== id);
+    });
+  };
+
   return (
     /*retorno da função App é um node html:
       - só pode-se encapsular os elementos html dentro de UMA div;
@@ -47,20 +53,26 @@ export default function App() {
         <TaskList
           title="Pendente"
           onAddTask={addTask}
-          tasks={tasks}
+          taskState="Pendente"
+          tasks={tasks.filter((t) => t.state === "Pendente")}
           onTaskUpdate={updateTask}
+          onDeleteTask={deleteTask}
         />
         <TaskList
           title="Fazendo"
           onAddTask={addTask}
-          tasks={tasks}
+          taskState="Fazendo"
+          tasks={tasks.filter((t) => t.state === "Fazendo")}
           onTaskUpdate={updateTask}
+          onDeleteTask={deleteTask}
         />
         <TaskList
           title="Completo"
           onAddTask={addTask}
-          tasks={tasks}
+          taskState="Completo"
+          tasks={tasks.filter((t) => t.state === "Completo")}
           onTaskUpdate={updateTask}
+          onDeleteTask={deleteTask}
         />
       </div>
       <style>
