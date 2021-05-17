@@ -42,7 +42,7 @@ img {
 .App {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  background-color: #cd5c5c;
+  background-image: linear-gradient(to top right, #0a38bf, #7ebf0a);
   height: 100%;
   min-height: 100vh;
   color: white;

@@ -1,7 +1,8 @@
 .tasklist {
+  font-family: "Raleway", sans-serif;
   padding: 8px;
-  background-color: #fa8072;
-  border-radius: 2px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .tasklist .title {
@@ -20,30 +21,31 @@
 .tasklist .content .empty-list {
   text-align: center;
   border: 1px dashed white;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 4px;
 }
 
 .tasklist .btn {
   margin-top: 8px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   padding: 8px;
   display: flex;
   justify-content: center;
   background: none;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: white;
-  background: #00b8d4;
+  background-color: #1b97fb;
   transition: background-color 0.3s;
 }
 
 .tasklist .btn:hover {
-  background-color: #0091a8;
   cursor: pointer;
 }
 
 .tasklist .btn img {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 14px;
   margin-right: 4px;
 }
