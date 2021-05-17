@@ -25,6 +25,18 @@ export default function App() {
     });
   };
 
+  const updateTask = (id, title, state) => {
+    setTasks((existingTasks) => {
+      return existingTasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, title, state };
+        } else {
+          return task;
+        }
+      });
+    });
+  };
+
   return (
     /*retorno da função App é um node html:
       - só pode-se encapsular os elementos html dentro de UMA div;
@@ -32,7 +44,24 @@ export default function App() {
     <div className="App">
       <Navbar />
       <div className="container">
-        <TaskList title="Pendente" onAddTask={addTask} tasks={tasks} />
+        <TaskList
+          title="Pendente"
+          onAddTask={addTask}
+          tasks={tasks}
+          onTaskUpdate={updateTask}
+        />
+        <TaskList
+          title="Fazendo"
+          onAddTask={addTask}
+          tasks={tasks}
+          onTaskUpdate={updateTask}
+        />
+        <TaskList
+          title="Completo"
+          onAddTask={addTask}
+          tasks={tasks}
+          onTaskUpdate={updateTask}
+        />
       </div>
       <style>
         @import

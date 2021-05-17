@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./task-item.css";
 import PropTypes from "prop-types";
 
-export default function TaskItem({ id, title, taskState }) {
+export default function TaskItem({ id, title, taskState, onTaskUpdate }) {
   //chave pra controlar o estado da tarefa e quando está editando a tarefa
   //começa como false
   const [isEditing, setIsEditing] = useState(false);
@@ -11,6 +11,7 @@ export default function TaskItem({ id, title, taskState }) {
   const onTitleChange = (event) => {
     const newTitle = event.target.value;
     setEditableTitle(newTitle);
+    onTaskUpdate(id, newTitle, taskState);
   };
   const onKeyPress = (event) => {
     if (event.key === "Enter") {

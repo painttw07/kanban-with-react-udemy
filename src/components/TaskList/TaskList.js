@@ -3,7 +3,7 @@ import "./tasklist.css";
 import PropTypes from "prop-types";
 import TaskItem from "../TaskItem/TaskItem";
 
-export default function TaskList({ title, onAddTask, tasks }) {
+export default function TaskList({ title, onAddTask, tasks, onTaskUpdate }) {
   const addTask = () => {
     //responsável por chamar o onaddtask
     onAddTask("Nova Tarefa", "Pendente");
@@ -22,6 +22,7 @@ export default function TaskList({ title, onAddTask, tasks }) {
               id={task.id}
               title={task.title}
               taskState={task.taskState}
+              onTaskUpdate={onTaskUpdate}
             />
           );
         })}
