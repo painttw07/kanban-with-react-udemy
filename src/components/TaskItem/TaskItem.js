@@ -36,12 +36,14 @@ export default function TaskItem({
   //renderização condicional: renderiza um pedaço do componente dependendo do estado dele
   if (isEditing) {
     return (
-      <input
-        type="text"
-        value={editableTitle}
-        onChange={onTitleChange}
-        onKeyPress={onKeyPress}
-      />
+      <div className="task-item">
+        <input
+          type="text"
+          value={editableTitle}
+          onChange={onTitleChange}
+          onKeyPress={onKeyPress}
+        />
+      </div>
     );
   } else {
     return (
