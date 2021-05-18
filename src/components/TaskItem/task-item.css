@@ -1,5 +1,5 @@
 .task-item {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #004369;
   border-radius: 6px;
   box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
   cursor: pointer;
@@ -7,17 +7,17 @@
   width: 100%;
   padding: 8px 4px;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
 }
 .select-item {
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
   font-weight: bold;
   color: black;
 }
 
 .task-item input[type="text"] {
   border: none;
-  font-size: 14px;
   display: block;
   width: 100%;
 }

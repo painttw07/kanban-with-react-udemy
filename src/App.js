@@ -77,7 +77,11 @@ export default function App() {
       </div>
       <style>
         @import
-        url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+        url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+      </style>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
       </style>
     </div>
   );
